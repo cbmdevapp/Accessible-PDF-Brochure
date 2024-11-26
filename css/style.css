@@ -1,0 +1,46 @@
+/* Gaya untuk kontainer tab Brosur PDF */
+.pdf-brochure-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Gaya untuk tombol PDF */
+.pdf-brochure-container .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #0071a1;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Gaya tombol saat hover */
+.pdf-brochure-container .button:hover {
+    background-color: #005f85;
+    color: #ffffff;
+}
+
+/* Gaya untuk teks di dalam tab */
+.pdf-brochure-container p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    .pdf-brochure-container .button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .pdf-brochure-container p {
+        font-size: 0.85rem;
+    }
+}
