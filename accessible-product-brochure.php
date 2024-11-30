@@ -1,9 +1,11 @@
 <?php
 /**
  * Plugin Name: Accessible PDF Brochure for WooCommerce
+ * Plugin URI: https://github.com/desoem/Accessible-PDF-Brochure
  * Description: Adds a responsive and accessible PDF brochure tab to WooCommerce product pages.
  * Version: 1.0
  * Author: Ridwan Sumantri
+ * Author URI: https://github.com/deseom
  * License: GPLv2 or later
  */
 
@@ -15,7 +17,7 @@ add_filter( 'woocommerce_product_tabs', 'add_pdf_brochure_tab' );
 function add_pdf_brochure_tab( $tabs ) {
     $tabs['pdf_brochure'] = array(
         'title'    => __( 'Brochure', 'accessible-pdf-brochure' ),
-        'priority' => 20,
+        'priority' => 30,
         'callback' => 'display_pdf_brochure_tab_content'
     );
     return $tabs;
