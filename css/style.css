@@ -1,46 +1,239 @@
-/* Gaya untuk kontainer tab Brosur PDF */
+/* Modern CSS untuk kontainer tab Brosur PDF */
 .pdf-brochure-container {
     margin-top: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-/* Gaya untuk tombol PDF */
+.pdf-brochure-container:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Modern button styling */
 .pdf-brochure-container .button {
-    display: inline-block;
-    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
     font-size: 1rem;
-    font-weight: bold;
-    background-color: #0071a1;
+    font-weight: 600;
+    background: linear-gradient(135deg, #007cba 0%, #005a87 100%);
     color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 124, 186, 0.3);
 }
 
-/* Gaya tombol saat hover */
 .pdf-brochure-container .button:hover {
-    background-color: #005f85;
+    background: linear-gradient(135deg, #005a87 0%, #003d5c 100%);
     color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 124, 186, 0.4);
 }
 
-/* Gaya untuk teks di dalam tab */
+.pdf-brochure-container .button:focus {
+    outline: 2px solid #007cba;
+    outline-offset: 2px;
+}
+
+/* Modern text styling */
 .pdf-brochure-container p {
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-    color: #333;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #495057;
+    line-height: 1.6;
 }
 
-/* Responsif untuk perangkat kecil */
+.pdf-brochure-container p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Accessibility improvements */
+.pdf-brochure-container[role="region"] {
+    position: relative;
+}
+
+.pdf-brochure-container[role="region"]:focus-within {
+    outline: 2px solid #007cba;
+    outline-offset: 2px;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
+    .pdf-brochure-container {
+        padding: 16px;
+        margin-top: 16px;
+    }
+    
     .pdf-brochure-container .button {
         font-size: 0.9rem;
-        padding: 8px 16px;
+        padding: 10px 20px;
+        width: 100%;
+        justify-content: center;
     }
 
     .pdf-brochure-container p {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
+}
+
+@media (max-width: 480px) {
+    .pdf-brochure-container {
+        padding: 12px;
+        border-radius: 8px;
+    }
+    
+    .pdf-brochure-container .button {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .pdf-brochure-container {
+        background: #ffffff;
+        border: 2px solid #000000;
+    }
+    
+    .pdf-brochure-container .button {
+        background: #000000;
+        color: #ffffff;
+        border: 2px solid #000000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .pdf-brochure-container,
+    .pdf-brochure-container .button {
+        transition: none;
+    }
+    
+    .pdf-brochure-container:hover {
+        transform: none;
+    }
+    
+    .pdf-brochure-container .button:hover {
+        transform: none;
+    }
+}
+
+/* Admin field styling */
+.woocommerce_options_panel .options_group h3 {
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+    color: #0073aa !important;
+    border-bottom: 1px solid #ddd !important;
+    padding-bottom: 5px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.woocommerce_options_panel .options_group .description {
+    margin-top: 10px !important;
+    padding: 10px !important;
+    background: #f0f8ff !important;
+    border-left: 4px solid #0073aa !important;
+    border-radius: 4px !important;
+    font-style: italic !important;
+}
+
+.woocommerce_options_panel input[type="url"] {
+    width: 100% !important;
+    max-width: 500px !important;
+    padding: 8px 12px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+}
+
+.woocommerce_options_panel input[type="url"]:focus {
+    border-color: #0073aa !important;
+    box-shadow: 0 0 0 1px #0073aa !important;
+    outline: none !important;
+}
+
+.woocommerce_options_panel input[type="file"] {
+    width: 100% !important;
+    max-width: 500px !important;
+    padding: 8px 12px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    background: #f9f9f9 !important;
+}
+
+.woocommerce_options_panel input[type="file"]:focus {
+    border-color: #0073aa !important;
+    box-shadow: 0 0 0 1px #0073aa !important;
+    outline: none !important;
+}
+
+/* File upload preview */
+.pdf-upload-preview {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f0f8ff;
+    border: 1px solid #0073aa;
+    border-radius: 4px;
+    display: none;
+}
+
+.pdf-upload-preview.show {
+    display: block;
+}
+
+.pdf-upload-preview .file-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pdf-upload-preview .file-icon {
+    width: 24px;
+    height: 24px;
+    background: #0073aa;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.pdf-upload-preview .file-details {
+    flex: 1;
+}
+
+.pdf-upload-preview .file-name {
+    font-weight: 600;
+    color: #0073aa;
+}
+
+.pdf-upload-preview .file-size {
+    font-size: 12px;
+    color: #666;
+}
+
+.pdf-upload-preview .remove-file {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.pdf-upload-preview .remove-file:hover {
+    background: #c82333;
 }
